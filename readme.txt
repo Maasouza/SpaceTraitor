@@ -18,9 +18,6 @@ Os modelos 3Ds e músicas foram achados na internet (devidos créditos aos autores
 
 Por questão de seguraça, os navegadores não permitem que o JavaScript acesse o disco local, impossibilitando do jogo ser aberto fora de um servidor. Para executar, basta colocar os arquivos em um servidor e abrir a pasta através do servidor local. 
 
-Por problemas no tamanho do arquivo, as pastas 'images', 'audio', 'obj' estão localizadas neste link: 
-Para realizar a execução do programa, basta baixar estas pastas e colocá-las dentro da pasta extraída do zip, junto com as outras pastas (css, js, node_modules...).
-
 
 Caso deseje abrir sem realizar este processo, basta abrir a página jogo.html, que levará para o link do jogo online, e o repositorio.html levará diretamente para o repositório do github.  
 

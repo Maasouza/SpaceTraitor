@@ -27,3 +27,4 @@ Caso deseje abrir sem realizar este processo, basta abrir a página jogo.html, qu
 
 Repositório: https://github.com/Maasouza/SpaceTraitor/
 O jogo online: http://maasouza.github.io/SpaceTraitor/
+Download codigo fonte:https://github.com/Maasouza/SpaceTraitor/archive/gh-pages.zip

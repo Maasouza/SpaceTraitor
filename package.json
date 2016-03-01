@@ -1,0 +1,34 @@
+{
+  "name": "trabalhofinalcg",
+  "version": "1.0.0",
+  "description": "Trabalho de computação grafica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify js/main.js | uglifyjs -mc > app.js",
+    "dev": "watchify js/main.js -v -o app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Maasouza/CG_TrabFinal"
+  },
+  "keywords": [
+    "Trabalho",
+    "Final",
+    "CG",
+    "Computação",
+    "Grafica",
+    "UFRJ"
+  ],
+  "author": "Marcos & Anna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maasouza/CG_TrabFinal/issues"
+  },
+  "homepage": "https://github.com/Maasouza/CG_TrabFinal",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "uglify-js": "^2.6.1",
+    "watchify": "^3.7.0"
+  }
+}

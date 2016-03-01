@@ -1,0 +1,156 @@
+<html lang="pt_br">
+<head>
+  <meta charset="utf-8">
+  <title>Space Traitor</title>
+      <link rel="shortcut icon" href="images/logo.ico">
+
+  <style>
+    html, body {
+      padding: 0;
+      margin:  0;
+      height: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #loadDiv{
+      background: url("images/0.jpg");
+      color: #EDED0C;
+      width: 100%;
+      height:100%;
+    }
+    @import url(http://fonts.googleapis.com/css?family=Orbitron);
+
+    #infobar{
+      font-family: Orbitron, sans-serif;
+      position:absolute;
+      left:0;
+      right:0;
+      height:1.5em;
+      background:#003;
+      color:#ff6;
+      line-height:1.5em;
+      display: none;
+    }
+    #backgroundMenu{
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      right: -40px;
+      bottom: -40px;
+      width: auto;
+      height: auto;
+      background-image: url(images/0.jpg) transparent;
+      background-size: cover;
+      -webkit-filter: blur(0.5px);
+      z-index: 2;
+      display: none;
+      color: #EDED0C;
+    }
+
+    #centro {
+      width:717px;
+      height:89px;
+      position:absolute;
+      left:25%;
+      top:5%;
+    }
+
+    .menu{
+    position: absolute;
+    top:50%;
+    margin-left: -145px;
+    margin-top: -75px;
+    height: 150px;
+    width: 350px;
+    left:50%;
+    padding: 10px;
+    z-index: 2;
+    }
+
+    .menu input[type=button]{
+    width: 260px;
+    height: 35px;
+    background: #333;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #ffff66;
+    font-family: "Droid Sans", arial, verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px;
+    margin-top: 10px;
+    }
+
+
+    button{
+      background-color: Transparent;
+      background-repeat:no-repeat;
+      border: none;
+      cursor:auto;
+      overflow: hidden;
+      outline:none;
+      width: 260px;
+      height: 50px;
+      border-radius: 2px;
+      color: #ffff66;
+      font-family:'MyFont', arial, verdana, sans-serif;
+      font-size: 36px;
+      font-weight: 600;
+      padding: 6px;
+      margin-top: -50px;
+    }
+
+    #gameoverImg{
+      background-repeat:no-repeat;
+      border: none;
+      cursor:auto;
+      overflow: hidden;
+      outline:none;
+      width: 480px;
+      height: 60px;
+      border-radius: 2px;
+      color: #ffff66;
+      font-family:'MyFont', arial, verdana, sans-serif;
+      padding: 6px;
+      margin-top: -120px;
+      margin-left: -100px;
+      background-size: cover;
+    }
+
+  </style>
+  <script>
+    function changeVolume(value){
+      var audio = document.getElementById("backgroundAudio");
+      audio.pause();
+      audio.volume = value;
+    }
+  </script>
+  <script src="js/THREEx.KeyboardState.js"></script>
+</head>
+<body>
+  <audio id='backgroundAudio' style="display=hidden;"loop="loop" autoplay="autoplay" onloadeddata="changeVolume(0.3)">
+    <source src="audio/game.mp3" />
+  </audio>
+  <div align="center" id="loadDiv">
+    <h1 id="loading">Carregando</h1>
+  </div>
+
+  <div id="infobar" align="center">
+     Vida: <span id="vida">♥&nbsp;♥&nbsp;♥</span>
+     &nbsp;&nbsp;
+     Pontos: <span id="pontos">0</span>
+  </div>
+
+  <div id="backgroundMenu">
+    <div class="menu" id="main">
+       <button id= "gameoverImg" style="background-image:url('images/gameOver.png')"></button><br>
+       <button id="pontuacao" value="Pontos"></button>
+       <input type="button" onClick="resetarMundo()" value="Jogar Novamente" >
+       <input type="button" onClick="javascript:window.location.href='menu.html'" value="Menu Inicial" >
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  </body>
+</html>

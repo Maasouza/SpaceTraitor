@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html >
+  <head>
+      <meta charset="UTF-8" />
+      <title>Space Traitor</title>
+
+      <link rel="shortcut icon" href="images/logo.ico">
+      <link href="css/home.css" id="cm-theme" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+
+        function showInfo(){
+          document.getElementById("info").style.display='block';
+        }
+
+        function hideInfo(){
+          document.getElementById("info").style.display='none';
+        }
+
+        function showCred(){
+          document.getElementById("cred").style.display='block';
+        }
+
+        function hideCred(){
+          document.getElementById("cred").style.display='none';
+        }
+
+        audiostate = true //audio ativo
+        function changeVolume(value){
+          var audio = document.getElementById("backgroundAudio");
+          audio.volume = value;
+        }
+
+        function mute(){
+          var audio = document.getElementById("backgroundAudio");
+          var btn = document.getElementById("btnsound");
+          if(audiostate){
+            btn.value = "Ligar Música"
+            audio.pause()
+            audiostate=false
+          }else{
+            btn.value = "Desligar Música"
+            audio.play()
+            audiostate=true
+          }
+        }
+
+    </script>
+    <audio id='backgroundAudio' style="display=hidden;"loop="loop" autoplay="autoplay" onloadeddata="changeVolume(0.3)">
+      <source src="audio/open.mp3" />
+    </audio>
+    <div class="body"></div>
+		<div class="grad"></div>
+		<div class="menu" id="main">
+                 <button style="background-image:url('images/logo.png')"></button>
+                 <input type="button" onClick="javascript:window.location.href='game.html'" value="Jogar" >
+                 <input type="button" value="Instru&ccedil;&atilde;o" onClick="showInfo()">
+                 <input type="button" value="Créditos" onclick="showCred()">
+                 <input type="button" id='btnsound' value="Desligar Música" onclick="mute()">
+		</div>
+    <a href='javascript:hideInfo()'><div  id="info"></div><a/>
+    <a href='javascript:hideCred()'><div  id="cred"></div><a/>
+  </body>
+</html>
